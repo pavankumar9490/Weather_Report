@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to top, #87ceeb 0%, #ffffff 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+form {
+  background-color: rgba(95, 202, 244, 0.8);
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 600px;
+}
+
+form h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 28px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 70%;
+  margin-bottom: 10px;
+  max-width: 100%;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #0c97c1;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.city-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  padding-bottom: 20px;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  flex-direction: row-reverse; /* Reverse scrolling */
+}
+
+.city-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari */
+}
+
+.name {
+  margin-top: 120px;
+}
+
+.temp {
+  margin-top: 70px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 5px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+.count {
+  margin: 5px 0;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 5px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.8) url('https://media.istockphoto.com/id/1291115215/vector/cloud-with-sun-flat-icon-vector-illustration.jpg?s=612x612&w=0&k=20&c=GvinQKygxCfrDPRqAdSd0DQ6vOer18hMGcX93LMLyGM=') no-repeat center center;
+  background-size: fit;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  color: #333;
+  width: 100%;
+  max-width: 600px; /* same as form */
+  margin: 0 auto; /* center horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+  .weather-card {
+    flex: 0 0 80%; /* wider cards for mobile */
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  form h1 {
+    font-size: 22px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .weather-card h3 {
+    font-size: 18px;
+  }
+
+  .weather-card p {
+    font-size: 14px;
+  }
+}
